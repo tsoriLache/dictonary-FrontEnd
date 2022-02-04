@@ -1,18 +1,19 @@
 import { useState } from 'react';
-import ChoosePart from './ChoosePart';
-import Result from './Result';
 import './style/App.css';
 import axios from 'axios';
+import Display from './Display';
 
 function App() {
   const serverDomain = 'http://localhost:8000/';
   const [searchInput, setSearchInput] = useState('');
+  const [data, setData] = useState({});
+
   const handleSearch = async (e) => {
     e.preventDefault();
-    console.log(searchInput);
-    const res = await axios.get(`${serverDomain}${searchInput}`);
-    console.log(res);
+    const result = await axios.get(`${serverDomain}${searchInput}`);
+    setData(result.data);
   };
+
   return (
     <div className="wrapper">
       <audio id="sound"></audio>
@@ -29,8 +30,7 @@ function App() {
             Search
           </button>
         </form>
-        {/* <Result /> */}
-        {/* <ChoosePart /> */}
+        <Display data={data} />
       </div>
     </div>
   );
