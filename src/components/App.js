@@ -1,21 +1,32 @@
+import { useState } from 'react';
+import ChoosePart from './ChoosePart';
 import Result from './Result';
 import './style/App.css';
 
 function App() {
+  const [searchInput, setSearchInput] = useState('');
+  const handleSearch = (e) => {
+    e.preventDefault();
+    console.log(searchInput);
+  };
   return (
-    <div class="wrapper">
+    <div className="wrapper">
       <audio id="sound"></audio>
-      <div class="container">
-        <div class="search-box">
+      <div className="container">
+        <form className="search-box" onSubmit={(e) => handleSearch(e)}>
           <input
+            onChange={({ target }) => setSearchInput(target.value)}
+            defaultValue={searchInput}
             type="text"
             placeholder="Type the word here..."
             id="inp-word"
           />
-
-          <button id="search-btn">Search</button>
-        </div>
-        <Result />
+          <button type="submit" id="search-btn">
+            Search
+          </button>
+        </form>
+        {/* <Result /> */}
+        {/* <ChoosePart /> */}
       </div>
     </div>
   );
