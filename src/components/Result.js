@@ -5,18 +5,18 @@ export default function Result() {
   const partOfSpeech = 'n.';
   const definition = 'greating word in english also mean peace';
   return (
-    <div id="result" class="result">
-      <div class="word">
+    <div id="result" className="result">
+      <div className="word">
         <h3>{word}</h3>
         {/* <button onclick="playSound()">
             {' '}
-            <i class="fas fa-volume-up"></i>
+            <i className="fas fa-volume-up"></i>
           </button> */}
       </div>
-      <div class="details">
+      <div className="details">
         <p>{partOfSpeech}</p>
       </div>
-      <p class="word-meaning">{definition}</p>
+      <p className="word-meaning">{definition}</p>
     </div>
   );
 }
