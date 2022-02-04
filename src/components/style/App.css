@@ -53,6 +53,7 @@ a {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  margin-bottom: 10px;
 }
 .search-box input {
   padding: 5px;
