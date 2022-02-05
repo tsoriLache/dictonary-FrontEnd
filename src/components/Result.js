@@ -1,22 +1,20 @@
 import React from 'react';
+import Meaning from './Meaning';
 
-export default function Result() {
-  const word = 'hello';
-  const partOfSpeech = 'n.';
-  const definition = 'greating word in english also mean peace';
+export default function Result({ res }) {
   return (
     <div id="result" className="result">
       <div className="word">
-        <h3>{word}</h3>
+        <h3>{res.word}</h3>
         {/* <button onclick="playSound()">
             {' '}
             <i className="fas fa-volume-up"></i>
           </button> */}
       </div>
       <div className="details">
-        <p>{partOfSpeech}</p>
+        <p>{res.pos}</p>
       </div>
-      <p className="word-meaning">{definition}</p>
+      <Meaning definitions={res.definitions} />
     </div>
   );
 }
