@@ -15,7 +15,6 @@
   align-items: center;
   font-family: 'Shabnam', Tahoma, sans-serif;
   color: #000;
-  direction: rtl;
   word-wrap: break-word;
 }
 
@@ -23,6 +22,7 @@
   text-align: center;
   line-height: normal;
   position: relative;
+  max-width: 95%;
   font-size: 2.5em;
   font-weight: 900;
   margin-bottom: 10%;
@@ -30,7 +30,7 @@
 }
 #oopss #error-text p.p-a {
   text-align: center;
-  line-height: normal;
+  line-height: 3rem;
   font-size: 2rem;
   margin-bottom: 10%;
   word-wrap: break-word;

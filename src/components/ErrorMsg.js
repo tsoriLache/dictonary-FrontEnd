@@ -8,8 +8,8 @@ export default function ErrorMsg({ err }) {
           src="https://cdn.rawgit.com/ahmedhosna95/upload/1731955f/sad404.svg"
           alt="404"
         />
-        <span>PAGE 404</span>
-        <p class="p-a">The page you were looking for could not be found</p>
+        <span>{err.statusCode}</span>
+        <p class="p-a">{err.message}</p>
       </div>
     </div>
   );
