@@ -1,12 +1,15 @@
 import React from 'react';
 import './style/ChoosePart.scss';
-export default function ChoosePart() {
+export default function ChoosePart({ parts }) {
   return (
     <div className="button-group">
-      <button className="e-mg-b--md bg--blue-grad">Button</button>
-      <button className="e-mg-b--md bg--green-grad">Button</button>
-      <button className="e-mg-b--md bg--red-grad">Button</button>
-      <button className="e-mg-b--md bg--purple-grad">Button</button>
+      {parts.map((part, i) => {
+        return i % 2 === 0 ? (
+          <button className="e-mg-b--md bg--blue-grad">{part}</button>
+        ) : (
+          <button className="e-mg-b--md bg--purple-grad">{part}</button>
+        );
+      })}
     </div>
   );
 }

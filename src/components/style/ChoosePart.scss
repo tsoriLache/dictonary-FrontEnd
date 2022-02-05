@@ -35,13 +35,13 @@ button {
   @include background-color(#58dada, #1ca2bb);
 }
 
-.bg--green-grad {
-  @include background-color(#aaffc7, #5fcc9c);
-}
+// .bg--green-grad {
+//   @include background-color(#aaffc7, #5fcc9c);
+// }
 
-.bg--red-grad {
-  @include background-color(#ea4c4c, #900d0d);
-}
+// .bg--red-grad {
+//   @include background-color(#ea4c4c, #900d0d);
+// }
 
 .bg--purple-grad {
   @include background-color(#bab5f6, #4d3664);
