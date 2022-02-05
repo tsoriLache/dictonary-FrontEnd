@@ -2,9 +2,9 @@ import { useState } from 'react';
 import './style/App.css';
 import axios from 'axios';
 import Display from './Display';
+import serverDomain from '../env_config';
 
 function App() {
-  const serverDomain = 'http://localhost:8000/';
   const [searchInput, setSearchInput] = useState('');
   const [data, setData] = useState({});
 
@@ -34,7 +34,7 @@ function App() {
             Search
           </button>
         </form>
-        <Display data={data} />
+        <Display data={data} setData={setData} searchInput={searchInput} />
       </div>
     </div>
   );
