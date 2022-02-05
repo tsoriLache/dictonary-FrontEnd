@@ -10,8 +10,12 @@ function App() {
 
   const handleSearch = async (e) => {
     e.preventDefault();
-    const result = await axios.get(`${serverDomain}${searchInput}`);
-    setData(result.data);
+    if (searchInput !== '') {
+      const result = await axios.get(`${serverDomain}${searchInput}`);
+      setData(result.data);
+    } else {
+      setData({});
+    }
   };
 
   return (

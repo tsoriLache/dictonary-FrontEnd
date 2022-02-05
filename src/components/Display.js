@@ -11,8 +11,10 @@ export default function Display({ data }) {
         <Result res={data.res} />
       ) : data.hasOwnProperty('pos') ? (
         <ChoosePart pos={data.pos} />
-      ) : (
+      ) : data.hasOwnProperty('err') ? (
         <ErrorMsg err={data} />
+      ) : (
+        ''
       )}
     </div>
   );
