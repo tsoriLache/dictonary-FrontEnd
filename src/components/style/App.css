@@ -12,10 +12,15 @@
   font-family: 'Poppins', sans-serif;
 }
 body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
   background-color: #ae9cff;
 }
 .wrapper {
-  width: 92vmin;
+  width: 85%;
+  height: 70%;
+  padding-bottom: 3%;
   position: absolute;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
@@ -100,9 +105,9 @@ a {
   display: -ms-flexbox;
   display: flex;
   gap: 10px;
-  color: #b3b6d4;
+  color: #77798b9f;
   margin: 5px 0 20px 0;
-  font-size: 14px;
+  font-size: 1.4rem;
 }
 .word-meaning {
   color: #575a7b;

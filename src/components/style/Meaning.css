@@ -16,7 +16,10 @@ body {
 .mySlides {
   display: none;
   /* display: block; */
-  padding: 80px;
+  overflow: scroll;
+  overflow-x: hidden;
+  height: 45vh;
+  padding: 10%;
   text-align: center;
 }
 
