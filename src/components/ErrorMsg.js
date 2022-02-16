@@ -9,7 +9,7 @@ export default function ErrorMsg({ err }) {
           alt="404"
         />
         <span>{err.statusCode}</span>
-        <p class="p-a">{err.message}</p>
+        <p className="p-a">{err.message}</p>
       </div>
     </div>
   );
