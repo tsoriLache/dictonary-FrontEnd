@@ -8,7 +8,6 @@ export default function ErrorMsg({ err }) {
           src="https://cdn.rawgit.com/ahmedhosna95/upload/1731955f/sad404.svg"
           alt="404"
         />
-        <span>{err.statusCode}</span>
         <p className="p-a">{err.message}</p>
       </div>
     </div>
