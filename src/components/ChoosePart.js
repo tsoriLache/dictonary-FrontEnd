@@ -18,7 +18,7 @@ export default function ChoosePart({ parts, searchInput, setData }) {
               handleClick(part);
             }}
             key={i}
-            className="e-mg-b--md bg--blue-grad"
+            className="btn e-mg-b--md bg--blue-grad"
           >
             {part}
           </button>
@@ -28,7 +28,7 @@ export default function ChoosePart({ parts, searchInput, setData }) {
               handleClick(part);
             }}
             key={i}
-            className="e-mg-b--md bg--purple-grad"
+            className="btn e-mg-b--md bg--purple-grad"
           >
             {part}
           </button>
