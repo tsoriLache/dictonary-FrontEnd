@@ -2,41 +2,31 @@ import { useState } from 'react';
 import './style/App.css';
 import axios from 'axios';
 import Display from './Display';
-import serverDomain from '../env_config';
+import SERVER_DOMAIN from '../env_config';
 
 function App() {
   const [searchInput, setSearchInput] = useState('');
   const [data, setData] = useState({});
 
   const handleSearch = async (e) => {
-    // // for clickable words
-    if (typeof e === 'string') {
-      handleClickedSearch(e.replace(/\W/g, ''));
-      return;
-    }
     e.preventDefault();
-    if (searchInput !== '') {
-      const result = await axios.get(`${serverDomain}${searchInput}`);
-      setData(result.data);
-    } else {
-      setData({});
-    }
+    searchInput !== ''
+      ? setData((await axios.get(`${SERVER_DOMAIN}${searchInput}`)).data)
+      : setData({});
   };
 
   const handleClickedSearch = async (input) => {
-    const result = await axios.get(`${serverDomain}${input}`);
-    console.log(result);
+    const cleanInput = input.replace(/\W/g, '');
+    const result = await axios.get(`${SERVER_DOMAIN}${cleanInput}`);
     setData(result.data);
-    setSearchInput(input);
+    setSearchInput(cleanInput);
   };
   return (
     <div className="wrapper">
-      <audio id="sound"></audio>
       <div className="container">
         <form className="search-box" onSubmit={(e) => handleSearch(e)}>
           <input
             onChange={({ target }) => setSearchInput(target.value)}
-            defaultValue={searchInput}
             value={searchInput}
             type="text"
             placeholder="Type the word here..."
@@ -50,7 +40,7 @@ function App() {
           data={data}
           setData={setData}
           searchInput={searchInput}
-          handleSearch={handleSearch}
+          handleSearch={handleClickedSearch}
         />
       </div>
     </div>
@@ -58,3 +48,12 @@ function App() {
 }
 
 export default App;
+
+// {/* <div className="container">
+//   <button type="submit" id="search-btn">
+//     Search
+//   </button>
+//   <button type="submit" id="search-btn">
+//     Search
+//   </button>
+// </div> */}
