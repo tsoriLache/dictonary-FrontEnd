@@ -49,8 +49,10 @@ export default function Meaning({ definitions, word, handleSearch }) {
           return (
             <div key={i} ref={definitionsRefs[i]} className="mySlides">
               <q>
-                {definition.split(' ').map((word) => (
-                  <span onClick={() => handleSearch(word)}>{word + ' '}</span>
+                {definition.split(' ').map((word, i) => (
+                  <span key={i} onClick={() => handleSearch(word)}>
+                    {word + ' '}
+                  </span>
                 ))}
               </q>
               <p className="author">
