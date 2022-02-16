@@ -13,12 +13,12 @@ export default function Meaning({ definitions }) {
         .fill()
         .map((_, i) => definitionsRefs[i] || createRef())
     );
-  }, [definitionsLength]);
-  //
-  let slideIndex = 0;
-  useEffect(() => {
-    showSlides(slideIndex);
   }, []);
+
+  useEffect(() => {
+    showSlides(1);
+    document.title = `Dictionary - ${word.toLowerCase()}`;
+  });
 
   function plusSlides(n) {
     showSlides((slideIndex += n));
