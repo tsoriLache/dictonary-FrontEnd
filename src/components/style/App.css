@@ -28,11 +28,12 @@ body {
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
-  top: 2%;
+  top: 2vh;
   left: 50%;
 }
 .container {
-  margin-top: 5%;
+  max-height: 90vh;
+  margin-top: 5vh;
   width: 100%;
   background-color: #ffffff;
   padding: 80px 50px;

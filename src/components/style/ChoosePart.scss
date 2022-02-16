@@ -19,9 +19,8 @@ $box-shadow-value: 0 15px 35px rgba(50, 50, 93, 0.1),
 
 .btn {
   min-width: 40vw;
-  // max-width: 60vw;
   border: 0;
-  font-size: 16px;
+  font-size: 1.7rem;
   line-height: 16px;
   padding: 15px 50px;
   border-radius: 5px;
@@ -36,14 +35,6 @@ $box-shadow-value: 0 15px 35px rgba(50, 50, 93, 0.1),
 .bg--blue-grad {
   @include background-color(#58dada, #1ca2bb);
 }
-
-// .bg--green-grad {
-//   @include background-color(#aaffc7, #5fcc9c);
-// }
-
-// .bg--red-grad {
-//   @include background-color(#ea4c4c, #900d0d);
-// }
 
 .bg--purple-grad {
   @include background-color(#bab5f6, #4d3664);
