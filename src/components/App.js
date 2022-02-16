@@ -9,6 +9,11 @@ function App() {
   const [data, setData] = useState({});
 
   const handleSearch = async (e) => {
+    // // for clickable words
+    if (typeof e === 'string') {
+      handleClickedSearch(e.replace(/\W/g, ''));
+      return;
+    }
     e.preventDefault();
     if (searchInput !== '') {
       const result = await axios.get(`${serverDomain}${searchInput}`);
@@ -18,6 +23,12 @@ function App() {
     }
   };
 
+  const handleClickedSearch = async (input) => {
+    const result = await axios.get(`${serverDomain}${input}`);
+    console.log(result);
+    setData(result.data);
+    setSearchInput(input);
+  };
   return (
     <div className="wrapper">
       <audio id="sound"></audio>
@@ -26,15 +37,21 @@ function App() {
           <input
             onChange={({ target }) => setSearchInput(target.value)}
             defaultValue={searchInput}
+            value={searchInput}
             type="text"
             placeholder="Type the word here..."
             id="inp-word"
           />
           <button type="submit" id="search-btn">
-            Search
+            ➡
           </button>
         </form>
-        <Display data={data} setData={setData} searchInput={searchInput} />
+        <Display
+          data={data}
+          setData={setData}
+          searchInput={searchInput}
+          handleSearch={handleSearch}
+        />
       </div>
     </div>
   );

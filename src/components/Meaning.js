@@ -2,9 +2,10 @@ import './style/Meaning.css';
 
 import React, { useState, useEffect, createRef } from 'react';
 
-export default function Meaning({ definitions }) {
+export default function Meaning({ definitions, word, handleSearch }) {
   const [definitionsRefs, setDefinitionsRefs] = useState([]);
   const definitionsLength = definitions.length;
+  let slideIndex = 0;
 
   useEffect(() => {
     // add or remove refs
@@ -47,14 +48,17 @@ export default function Meaning({ definitions }) {
         {definitions.map((definition, i) => {
           return (
             <div key={i} ref={definitionsRefs[i]} className="mySlides">
-              <q>{definition}</q>
+              <q>
+                {definition.split(' ').map((word) => (
+                  <span onClick={() => handleSearch(word)}>{word + ' '}</span>
+                ))}
+              </q>
               <p className="author">
                 - {i + 1}/{definitions.length} -
               </p>
             </div>
           );
         })}
-
         <button
           className="prev"
           onClick={() => {
