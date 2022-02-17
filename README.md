@@ -1,70 +1,62 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# English-Dictionary-AWS
 
-## Available Scripts
+### Build an English dictionary by practicing many AWS services such as: DynamoDB | Lambda | CloudFormation | API Gateway | S3 | Serverless Framework |
 
-In the project directory, you can run:
+<img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/DynamoDB.png" height="50px" width="50px"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Orange_lambda.svg/980px-Orange_lambda.svg.png" height="50px" width="50px"><img src="https://www.pulumi.com/logos/tech/aws_cloudformation.png" height="50px" width="50px"><img src="https://openclipart.org/download/316471/1552081289.svg" height="50px" width="50px"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Amazon-S3-Logo.svg/1200px-Amazon-S3-Logo.svg.png" height="50px" width="50px"><img src="https://getcommandeer.com/_nuxt/img/4a7600a.png" height="50px" width="50px"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png" height="50px" width="50px"><img src="https://www.obg.eu.com/img/technologies/react.png" height="50px" width="50px">
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Technologies in use -
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **[React](https://reactjs.org/)**
+- **[React Router DOM](https://www.npmjs.com/package/react-router-dom)**
+- **[Serverless framework](https://www.serverless.com/)- For writing and uploading the backend as AWS lambda services.**
 
-### `npm test`
+#### AWS Services - ☁
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Lambda & CloudFormation & Api-Gateway - In order to upload an express server**
+- **DynamoDB - In order to store over 100,000 words**
+- **S3 - In order to serve the front as static files**
 
-### `npm run build`
+#### Packages -
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **.  [Axios](https://www.npmjs.com/package/axios) - For API requests | [Notyf](https://www.npmjs.com/package/notyf) - for nice popUp messages |**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## My app -
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Features -
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **Over 50,000 of words!**
+- **Search by word and get all its definitions in the different parts of speech**
+- **Search by word and part of speech desired**
+- **Receiving a random word in a particular part of speech**
+- **Receive a random word in a particular part of speech that contains a letter or letter combination of your choice**
+- **By clicking on any of the words you can switch to the definition of the same word!**
+- **Mobile first design!**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Global use -
 
-## Learn More
+###  [Visit my website!](http://my-dictionary-app.s3-website-us-east-1.amazonaws.com/) 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **The Front was served in S3 bucket as a static file.**
+- **The backend works with - DynamoDB to store data and serve the app by REST API (Api Gateway) in conjunction with Lambda serverless function.**
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Screenshots -
 
-### Code Splitting
+## Front interfaces:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Dynamic routes:
 
-### Analyzing the Bundle Size
+- **`"BASE_URL/"` - For home page (picture I below ⬇)**
+- **`"BASE_URL/part-of-speech/"` - Receiving a random word in a specific parts of speech (picture III ⬇)**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<img src="https://user-images.githubusercontent.com/89573774/154480423-74de5c55-0f7d-44d9-a658-ba8f7d4f7142.png" alt="drawing" width="200"/>|<img src="https://user-images.githubusercontent.com/89573774/154480513-492d1f11-dcd6-451a-8b48-9a3ef10cb57e.png" alt="drawing" width="200"/>|<img src="https://user-images.githubusercontent.com/89573774/154480564-84069017-c3a0-481c-a299-e91c0d2ed510.png" alt="drawing" width="200"/>
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
