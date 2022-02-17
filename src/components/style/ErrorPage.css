@@ -1,0 +1,54 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500);
+
+.cont {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #b251d891;
+  color: #fff;
+  font-size: 70%;
+  line-height: 1.5;
+  font-family: 'Roboto', sans-serif;
+}
+
+.button {
+  justify-self: center;
+  font-weight: 300;
+  color: #fff;
+  font-size: 1.2em;
+  border: 1px solid #efefef;
+  border-radius: 3px;
+  width: 70%;
+  position: relative;
+  transition: all 0.3s linear;
+  background-color: #d400ffb6;
+}
+
+/* .button:hover {
+  background-color: #007aff;
+  color: #fff;
+} */
+
+.p {
+  font-size: 2em;
+  text-align: center;
+  font-weight: 100;
+}
+
+.h1 {
+  text-align: center;
+  font-size: 15em;
+  font-weight: 100;
+  text-shadow: #a300cc 1px 1px, #a300cc 2px 2px, #a300cc 3px 3px,
+    #a300cd 4px 4px, #a300cd 5px 5px, #a300cd 6px 6px, #a300cd 7px 7px,
+    #720191 8px 8px, #720191 9px 9px, #720191 10px 10px, #720191 11px 11px,
+    #720191 12px 12px, #720191 13px 13px, #720191 14px 14px, #720191 15px 15px,
+    #720191 16px 16px, #720191 17px 17px, #720191 18px 18px, #720191 19px 19px,
+    #a300d1 20px 20px, #a300d1 21px 21px, #a300d1 22px 22px, #a300d1 23px 23px,
+    #a300d2 24px 24px;
+}
