@@ -3,6 +3,7 @@ import './style/App.css';
 import axios from 'axios';
 import Display from './Display';
 import SERVER_DOMAIN from '../env_config';
+import { Link } from 'react-router-dom';
 
 function App() {
   const [searchInput, setSearchInput] = useState('');
@@ -21,8 +22,12 @@ function App() {
     setData(result.data);
     setSearchInput(cleanInput);
   };
+
   return (
     <div className="wrapper">
+      <Link className="rand-btn" to="part-of-speech">
+        Click to learn new Words
+      </Link>
       <div className="container">
         <form className="search-box" onSubmit={(e) => handleSearch(e)}>
           <input
@@ -36,6 +41,7 @@ function App() {
             ➡
           </button>
         </form>
+
         <Display
           data={data}
           setData={setData}
@@ -48,12 +54,3 @@ function App() {
 }
 
 export default App;
-
-// {/* <div className="container">
-//   <button type="submit" id="search-btn">
-//     Search
-//   </button>
-//   <button type="submit" id="search-btn">
-//     Search
-//   </button>
-// </div> */}
