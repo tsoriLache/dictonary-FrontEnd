@@ -1,0 +1,38 @@
+.rand-container {
+  background-color: #ffffff;
+  margin-top: 2vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: 85%;
+  height: 90%;
+  padding-bottom: 3%;
+  position: fixed;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  top: 2vh;
+  left: 50%;
+  padding: 4vh 2vw;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 20px 40px rgba(38, 33, 61, 0.2);
+  box-shadow: 0 20px 40px rgba(38, 33, 61, 0.2);
+}
+
+.btns-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-bottom: 0.5rem;
+}
+
+.rand-btn {
+  background-color: #ae9cff9c;
+}
+
+.selector {
+  align-self: center;
+  width: 30%;
+  text-align: center;
+  color: #6e61a8;
+}
