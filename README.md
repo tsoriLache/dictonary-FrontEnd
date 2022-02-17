@@ -1,3 +1,4 @@
+
 # English-Dictionary-AWS
 
 ### Build an English dictionary by practicing many AWS services such as: DynamoDB | Lambda | CloudFormation | API Gateway | S3 | Serverless Framework |
@@ -56,5 +57,6 @@
 - **`"BASE_URL/part-of-speech/"` - Receiving a random word in a specific parts of speech (picture III ⬇)**
 
 <img src="https://user-images.githubusercontent.com/89573774/154480423-74de5c55-0f7d-44d9-a658-ba8f7d4f7142.png" alt="drawing" width="200"/>|<img src="https://user-images.githubusercontent.com/89573774/154480513-492d1f11-dcd6-451a-8b48-9a3ef10cb57e.png" alt="drawing" width="200"/>|<img src="https://user-images.githubusercontent.com/89573774/154480564-84069017-c3a0-481c-a299-e91c0d2ed510.png" alt="drawing" width="200"/>
+
 
 

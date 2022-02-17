@@ -1,0 +1,43 @@
+$box-shadow-value: 0 15px 35px rgba(50, 50, 93, 0.1),
+  0 5px 15px rgba(0, 0, 0, 0.07);
+
+@mixin background-color($lightColor, $darkColor) {
+  background-image: -webkit-gradient(
+    linear,
+    right bottom,
+    left top,
+    color-stop(0, $lightColor),
+    color-stop(100, $darkColor)
+  );
+}
+
+.button-group {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn {
+  min-width: 15rem;
+  max-width: 15rem;
+  border: 0;
+  font-size: 1.5rem;
+  line-height: 16px;
+  padding: 1rem 0.5rem;
+  border-radius: 5px;
+  box-shadow: $box-shadow-value;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  cursor: pointer;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.bg--blue-grad {
+  @include background-color(#58dada, #1ca2bb);
+}
+
+.bg--purple-grad {
+  @include background-color(#bab5f6, #4d3664);
+}

@@ -1,0 +1,35 @@
+#oopss {
+  margin-top: 15%;
+  /* background: linear-gradient(-45deg, #f773cfbb, #7e016d); */
+  /* border: #f773cfbb; */
+  /* border-style: solid; */
+  width: 100%;
+  height: 15rem;
+  line-height: 1.5em;
+  border-radius: 55px;
+  overflow: visible;
+}
+img {
+  width: 10rem;
+}
+#oopss #error-text {
+  font-size: 1.5rem;
+  display: flex;
+  margin: 5%;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Shabnam', Tahoma, sans-serif;
+  color: #000;
+  word-wrap: break-word;
+  text-align: center;
+}
+
+#oopss #error-text span {
+  line-height: normal;
+  position: relative;
+  max-width: 95%;
+  font-size: 2.5em;
+  font-weight: 900;
+  margin-bottom: 10%;
+  word-wrap: break-word;
+}
