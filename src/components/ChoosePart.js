@@ -3,8 +3,12 @@ import './style/ChoosePart.scss';
 import axios from 'axios';
 import serverDomain from '../env_config';
 
-export default function ChoosePart({ parts, searchInput, setData }) {
+export default function ChoosePart({ parts, searchInput, setData, onClick }) {
   const handleClick = async (part) => {
+    if (onClick) {
+      onClick(part);
+      return;
+    }
     const pos = part.slice(0, -1);
     const result = await axios.get(`${serverDomain}${searchInput}/${pos}`);
     setData({ res: { ...result.data } });
