@@ -12,17 +12,19 @@ $box-shadow-value: 0 15px 35px rgba(50, 50, 93, 0.1),
 }
 
 .button-group {
+  padding-top: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .btn {
-  min-width: 40vw;
+  min-width: 15rem;
+  max-width: 15rem;
   border: 0;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   line-height: 16px;
-  padding: 15px 50px;
+  padding: 1rem 0.5rem;
   border-radius: 5px;
   box-shadow: $box-shadow-value;
   text-transform: uppercase;
